@@ -3,9 +3,10 @@
 #include <ctype.h>
 #define LINE_LENGTH 1024
 
-int main()
+int main(int argc, char *argv[])
 {
-    FILE *filePointer = fopen("word.txt", "r"); 
+    printf("Usage: %s <filename>\n", argv[0]);
+    FILE *filePointer = fopen(argv[1], "r"); 
     char buffer[LINE_LENGTH];
     int inWord = 0;
     int lines = 0, words = 0;
@@ -25,7 +26,8 @@ int main()
             }
         }
     }
+    printf("File: %s\n", argv[1]);
     printf("\nLines: %d, Words: %d", lines, words);
-
+    fclose(filePointer);
     return 0;
 }
