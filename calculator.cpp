@@ -5,46 +5,48 @@ int main()
 {
     double a, b, answer;
     char op;
-    const char *error = NULL;
 
-    printf("Enter first number:\n");
-    scanf("%lf", &a); 
+    while(1){
+        const char *error = NULL;
 
-    printf("Enter operator:\n");
-    scanf(" %c", &op); 
+        printf("\nEnter first number:\n");
+        scanf("%lf", &a); 
 
-    printf("Enter second number:\n");
-    scanf("%lf", &b);
+        printf("Enter operator:\n");
+        scanf(" %c", &op); 
 
-    if (op == '+')
-    {
-        answer = a + b;
-    }
-    else if (op == '-')
-    {
-        answer = a - b;
-    }
-    else if (op == '*')
-    {
-        answer = a * b;
-    }
-    else if (op == '/')
-    {
-        answer = a / b;
-    }
-    else
-    {
-        error = "Unknown operator!";
-    }
+        printf("Enter second number:\n");
+        scanf("%lf", &b);
 
-    if (error)
-    {
-        printf(error);
-    }
-    else
-    {
-        printf("\n%lf %c %lf = %lf!", a, op, b, answer);
-    }
+        if (op == '+')
+        {
+            answer = a + b;
+        }
+        else if (op == '-')
+        {
+            answer = a - b;
+        }
+        else if (op == '*')
+        {
+            answer = a * b;
+        }
+        else if (op == '/')
+        {
+            answer = a / b;
+        }
+        else
+        {
+            error = "Unknown operator!";
+        }
 
+        if (error)
+        {
+            printf(error);
+        }
+        else
+        {
+            printf("\n%lf %c %lf = %lf!\n", a, op, b, answer);
+        }
+    }
     return 0;
 }
