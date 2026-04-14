@@ -45,7 +45,7 @@ int main()
         }
         else
         {
-            printf("\n%lf %c %lf = %lf!\n", a, op, b, answer);
+            printf("%lf %c %lf = %lf!\n", a, op, b, answer);
         }
     }
     return 0;
